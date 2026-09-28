@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sistema Nervioso</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header id="inicio">
+  <nav>
+    <a href="#inicio">Inicio</a><a href="#que-es">¿Qué es?</a><a href="#divisiones">Divisiones</a>
+    <a href="#interactivo">Interactivo</a><a href="#juego">Juego</a><a href="#evaluacion">Evaluación</a>
+  </nav>
+  <h1>🧠 SISTEMA NERVIOSO</h1>
+  <p>Conoce cómo el organismo recibe, procesa y responde a la información.</p>
+  <div class="pulse">⚡</div>
+</header>
+
+<main>
+<section id="que-es">
+  <h2>¿Qué es el sistema nervioso?</h2>
+  <p>Es el sistema encargado de <b>recibir estímulos</b>, <b>procesar información</b> y <b>coordinar respuestas</b> del organismo mediante impulsos eléctricos y químicos que viajan por las neuronas.</p>
+  <div class="steps">
+    <div>👁️<h3>1. Recepción</h3>Los receptores detectan estímulos (luz, calor, presión).</div>
+    <div>🧠<h3>2. Procesamiento</h3>El SNC interpreta la información y decide.</div>
+    <div>💪<h3>3. Respuesta</h3>Se envían órdenes a músculos y glándulas.</div>
+    <div>⚖️<h3>4. Coordinación</h3>Todo el organismo trabaja de forma integrada.</div>
+  </div>
+</section>
+
+<section id="divisiones">
+  <h2>Divisiones del sistema nervioso</h2>
+  <div class="cards">
+    <article><h3>🧠 SNC</h3>Formado por el <b>encéfalo</b> y la <b>médula espinal</b>. Integra la información y elabora las respuestas.</article>
+    <article><h3>🕸️ SNP</h3>Formado por <b>nervios</b> y <b>ganglios</b>. Comunica el SNC con el resto del cuerpo.</article>
+    <article><h3>🙋 Somático</h3>Controla acciones <b>voluntarias</b> (músculos esqueléticos) y lleva información sensorial.</article>
+    <article><h3>🫀 Autónomo</h3>Regula funciones <b>involuntarias</b>: simpático (activa) y parasimpático (calma).</article>
+  </div>
+</section>
+
+<section id="interactivo">
+  <h2>Esquema interactivo</h2>
+  <p>Haz clic en cada parte del esquema.</p>
+  <div class="tree">
+    <button class="node root" data-k="sn">SISTEMA NERVIOSO</button>
+    <div class="row">
+      <div class="col"><button class="node" data-k="snc">SNC</button>
+        <div class="row"><button class="node" data-k="enc">Encéfalo</button><button class="node" data-k="med">Médula espinal</button></div></div>
+      <div class="col"><button class="node" data-k="snp">SNP</button>
+        <div class="row"><button class="node" data-k="ner">Nervios</button><button class="node" data-k="som">Somático</button><button class="node" data-k="aut">Autónomo</button></div></div>
+    </div>
+  </div>
+  <div id="info" class="infocard">👆 Selecciona una parte del esquema.</div>
+</section>
+
+<section id="juego">
+  <h2>⚡ MISIÓN: SALVA EL SISTEMA NERVIOSO</h2>
+  <div class="hud">
+    <span id="hLives">❤️❤️❤️</span><span>⭐ <b id="hScore">0</b></span>
+    <span>⏱️ <b id="hTime">60</b>s</span><span>🏆 Nivel <b id="hLevel">1</b></span>
+  </div>
+  <div class="bar"><div id="bar"></div></div>
+  <div id="prompt">Mueve la señal ⚡ con flechas/WASD o los botones.</div>
+  <div class="stage">
+    <canvas id="cv" width="640" height="400"></canvas>
+    <div id="overlay"></div>
+  </div>
+  <div class="pad">
+    <button data-d="up">▲</button>
+    <div><button data-d="left">◀</button><button data-d="down">▼</button><button data-d="right">▶</button></div>
+  </div>
+</section>
+
+<section id="evaluacion">
+  <h2>📝 Evaluación final</h2>
+  <form id="quiz"></form>
+  <button id="qBtn" class="btn">Calificar</button>
+  <div id="qRes" class="infocard"></div>
+</section>
+</main>
+<footer>Sistema Nervioso · Proyecto educativo de bachillerato</footer>
+<script src="script.js"></script>
+</body>
+</html>
